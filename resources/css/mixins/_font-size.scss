@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    FONT SIZE
+\*------------------------------------*/
+
+
+/**
+ * Create a fully formed type style (sizing and vertical rhythm)
+ * by passing in a single value, e.g.:
+ *
+ * `@include font-size(10px);`
+ *
+ * @output `font-size` & `line-height`
+ */
+
+@mixin font-size($fs, $line-height: true, $important: null) {
+    @include rfs(decimal-round($fs), $important);
+    line-height: $fs * $line-height-base $important;
+}

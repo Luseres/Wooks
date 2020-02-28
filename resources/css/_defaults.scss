@@ -1,0 +1,30 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: $font-default;
+}
+
+.section {
+    padding: 50px 15vw;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+.search__error {
+    font-size: 1.5em;
+    text-align: center;
+    grid-column: 1/5;
+    margin-top: 3em;
+}
+
+img {
+    max-width: 100%;
+}
