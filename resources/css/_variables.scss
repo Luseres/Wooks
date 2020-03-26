@@ -2,10 +2,11 @@
 * Default branding styling
 */
 
-$primary:#B7D1A2;
-$secondary:#9DC080;
+$primary:#E35383;
+$secondary:#FEC327;
 $back: #FFF;
-$back-sec: #F6EEE3;
+$back-sec: #F5F5F5;
+$back-footer: #3D3D3D;
 $error: rgb(220, 0, 0);
 $success: rgb(0, 189, 0);
 
@@ -13,11 +14,8 @@ $success: rgb(0, 189, 0);
 * Base font families
 */
 
-$font-default: 'Arial';
-$font-site-title: 'Arial';
-$font-site-subtitle: 'Arial';
-$font-site-subtitle-bold: 'Arial';
-$font-section-title: 'Arial';
+$font-default: 'Lato', sans-serif;
+$font-title: 'Bree Serif', serif;
 
 /**
  * Text related variables

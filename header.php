@@ -23,5 +23,22 @@
 
 <body <?php body_class(); ?>>
 	<header>
-		<p>Header here</p>
+		<div class="header__section">
+			<a href="/"><img src="<?php echo THEME_URL; ?>/resources/images/logo_color.svg" alt="" class="header__logo"></a>
+		</div>
+		<div class="header__section"></div>
+		<div class="header__section">
+			<ul class="header__menu">
+				<a href="/" class="menu__link menu__link--active">
+					<li class="menu__item">Home</li>
+				</a>
+				<a href="/subscriptions" class="menu__link">
+					<li class="menu__item">Subscriptions</li>
+				</a>
+				<a href="/signin" class="menu__link">
+					<li class="menu__item">Sign in</li>
+				</a>
+			</ul>
+			<a href="/signup"><button class="wooks__button">Sign up</button></a>
+		</div>
 	</header>
