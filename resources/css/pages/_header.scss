@@ -1,9 +1,10 @@
 header {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto 1fr auto;
     color: #767676;
     padding-top: 20px;
     padding-bottom: 20px;
+
     .header__logo {
         height: auto;
         width: 50px;
@@ -11,6 +12,7 @@ header {
     }
     .header__menu {
         display: inline-block;
+        
         .menu__link {
             display: inline-block;
             list-style-type: none;

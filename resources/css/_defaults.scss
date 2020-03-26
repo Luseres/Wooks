@@ -38,6 +38,25 @@ section {
 
 img {
     max-width: 100%;
+    object-fit: cover;
+}
+
+.error__page {
+    .page__error {
+        text-align: center;
+        padding: 27.5vh 0 0 0;
+        font-family: $font-title;
+        font-size: 50px;
+    }
+    .page__error-link {
+        text-align: center;
+        font-family: $font-title;
+        font-size: 50px;
+        color: #333;
+    }
+    .page__error-text {
+        padding: 16px 0 27vh 0;
+    }
 }
 
 .wooks__button {
