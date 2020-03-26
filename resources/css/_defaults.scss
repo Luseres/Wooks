@@ -14,11 +14,10 @@ section, footer, header {
     display: block;
     margin: 0 auto;
     max-width: 1250px;
-    padding-left: 15vw;
-    padding-right: 15vw;
+    padding: 0 10vw;
 }
 section {
-    padding: 100px 15vw;
+    padding: 100px 10vw;
 }
 
 .error {
