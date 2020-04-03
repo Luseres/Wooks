@@ -2,7 +2,7 @@
 <main class="homepage">
 	<section class="section__main">
 		<div class="main__illustration">
-			<img class="main__image" src="https://via.placeholder.com/675x375?text=Mediacollege%20Amsterdam" alt="Main illustration">
+			<img class="main__image" src="<?php echo THEME_URL; ?>/resources/images/home.png" alt="Main illustration">
 		</div>
 		<div class="main__content">
 			<h1 class="main__title">Books for everyone</h1>
