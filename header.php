@@ -35,10 +35,11 @@
 				<a href="/subscriptions" class="menu__link">
 					<li class="menu__item">Subscriptions</li>
 				</a>
-				<a href="/signin" class="menu__link">
+				<a href="/my-account?signin" class="menu__link">
 					<li class="menu__item">Sign in</li>
 				</a>
 			</ul>
-			<a href="/signup"><button class="wooks__button">Sign up</button></a>
+			<a href="/my-account?signup"><button class="wooks__button header_signup">Sign up</button></a>
+			<a href="<?= wc_get_cart_url() ?>"><img class="menu__shoppingcart" src="<?php echo THEME_URL; ?>/resources/images/icons/shoppingcart_black.svg" alt="Shopping cart"></a>
 		</div>
 	</header>

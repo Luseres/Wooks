@@ -61,7 +61,7 @@ img {
 .wooks__button {
     background-color: $primary;
     color: #FFF;
-    padding: 12px 0 12px 30px;
+    padding: 10px 0 10px 30px;
     border-radius: 3px;
     border: none;
     box-shadow: 1px 5px 0px -1px rgba(184,56,99,1);
@@ -83,7 +83,7 @@ img {
     content: url("./images/icons/triangle_white.svg");
     background-color: #BA1A5A;
     object-fit: cover;
-    padding: 12px 20px;
+    padding: 10px 20px;
     height: 20px;
     width: 20px;
     margin-left: 30px;
@@ -103,4 +103,24 @@ img {
 .wooks__button--cta::after {
     background-color: #DBA028;
     box-shadow: 1px 5px 0px -1px #c79125;
+}
+
+
+.wooks__field {
+    background-color: #FFF;
+    color: #000;
+    padding: 9px 12px;
+    border-radius: 3px;
+    border: solid 1px #C4C4C4;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 24px;
+    width: 75%;
+}
+.wooks__label {
+    display: block;
+    margin-bottom: $smaller-gap;
+}
+.wooks__label .required {
+    color: red;
 }

@@ -7,6 +7,7 @@ add_theme_support('post-formats', array('quote', 'image', 'gallery', 'video'));
 add_theme_support('get_avatar');
 add_theme_support('wp_list_comments');
 add_theme_support('post-thumbnails');
+add_theme_support('woocommerce');
 add_image_size('custom-thumbnail-image-size', 570, 380, true);
 
 require_once get_parent_theme_file_path('functions/post-types.php');
