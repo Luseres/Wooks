@@ -16,8 +16,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<link rel="stylesheet" href="<?php echo THEME_URL; ?>/resources/app.css">
+	<link rel="stylesheet" href="<?php echo THEME_URL; ?>/resources/js/in-view.min.js">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<title><?= get_option('sitename'); ?></title>
+	<title><?= bloginfo('name'); ?> • Books for everyone</title>
 	<link rel="shortcut icon" href="<?php echo get_site_icon_url(); ?>" />
 </head>
 

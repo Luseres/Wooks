@@ -4,7 +4,9 @@
 section {
     padding-top: 50px;
 }
+
 .subscriptions {
+
     .subscriptions__title {
         font-size: 30px;
         margin-bottom: $small-gap;
@@ -16,14 +18,59 @@ section {
         font-weight: 300;
         margin-bottom: $huge-gap;
     }
+    .page-numbers {
+        display: block;
+        margin-top: $huge-gap;
+        text-align: center;
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+        .page-numbers {
+            padding: 15px 20px;
+            font-family: $font-default;
+            font-weight: 600;
+            transition: ease .3s color, ease .3s background-color;
+        }
+        .page-numbers:hover {
+            color: #FFF;
+            background-color: #000;
+        }
+        .current {
+            color: #FFF;
+            background-color: #000;
+        }
+        .prev, .next {
+            visibility: hidden;
+        }
+        .prev:hover, .next:hover {
+            color: #000;
+        }
+        .next::after {
+            content: "Next";
+            visibility: visible;
+        }
+        .prev::after {
+            content: "Previous";
+            visibility: visible;
+        }
+    }
+
     .products {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: $extreme-gap;
+        grid-column-gap: $extreme-gap;
+        grid-row-gap: $huge-gap;
+
         .product {
             position: relative;
             box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.17);
             background-color: #FFFFFF;
+
             a, ins {
                 text-decoration: none;
             }
