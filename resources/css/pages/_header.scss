@@ -19,7 +19,9 @@
         text-decoration: none;
         font-weight: 500;
         color: #767676;
-        margin-right: $huge-gap;
+        @media screen and (min-width: 1200px) {
+            margin-right: $huge-gap;
+        }
         transition: color ease .2s, transform ease .2s;
     }
 
@@ -56,14 +58,36 @@
     .mobile-menu {
         display: flex;
         &__nav {
+
+
+            z-index: 99;
+
+            position: absolute;
+            top: 0;
+            right: 0;
             display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+
+            background: #da1a5a;
+            a {
+                color: #fff;
+                font-size: 6vw;
+                margin: 30px 0;
+                &:not(:first-child):not(:last-child) {
+                    margin: 30px 0;
+                }
+            }
         }
     }
     
 
     // Mobile menu events
     #nav-checkbox:checked ~ .mobile-menu__nav {
-
+        display: flex;
     }
 
     #nav-checkbox:checked ~ .hamburger-menu {
@@ -81,10 +105,13 @@
     }
 
     .hamburger-menu {
+        z-index: 9999;
+
         cursor: pointer;
         position: relative;
         width: 30px;
         height: 30px;
+
         div {
             border: none;
             position: absolute;
