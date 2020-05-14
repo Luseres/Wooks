@@ -23,24 +23,62 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<header>
-		<div class="header__section">
-			<a href="/"><img src="<?php echo THEME_URL; ?>/resources/images/logo_color.svg" alt="" class="header__logo"></a>
+	<header class="header">
+		<a href="/" class="header__logo">
+			<img src="<?php echo THEME_URL; ?>/resources/images/logo_color.svg" alt="">
+		</a>
+
+		<div class="desktop-menu">
+			<a href="/" class="menu__link menu__link--active">
+				Home
+			</a>
+
+			<a href="/subscriptions" class="menu__link">
+				Subscriptions
+			</a>
+			
+			<a href="/my-account?signin" class="menu__link">
+				Sign in
+			</a>
+
+			<a href="/my-account?signup">
+				<button class="wooks__button header__signup">Sign up</button>
+			</a>
+		
+			<a href="<?= wc_get_cart_url() ?>">
+				<img class="menu__shoppingcart" src="<?php echo THEME_URL; ?>/resources/images/icons/shoppingcart_black.svg" alt="Shopping cart">
+			</a>
 		</div>
-		<div class="header__section"></div>
-		<div class="header__section">
-			<ul class="header__menu">
+
+		<div class="mobile-menu">
+			<input type="checkbox" id="nav-checkbox" style="display: none">
+			<label for="nav-checkbox" class="hamburger-menu">
+				<div></div>
+				<div></div>
+				<div></div>
+			</label>
+
+			<nav class="mobile-menu__nav">
 				<a href="/" class="menu__link menu__link--active">
-					<li class="menu__item">Home</li>
+					Home
 				</a>
+
 				<a href="/subscriptions" class="menu__link">
-					<li class="menu__item">Subscriptions</li>
+					Subscriptions
 				</a>
+				
 				<a href="/my-account?signin" class="menu__link">
-					<li class="menu__item">Sign in</li>
+					Sign in
 				</a>
-			</ul>
-			<a href="/my-account?signup"><button class="wooks__button header_signup">Sign up</button></a>
-			<a href="<?= wc_get_cart_url() ?>"><img class="menu__shoppingcart" src="<?php echo THEME_URL; ?>/resources/images/icons/shoppingcart_black.svg" alt="Shopping cart"></a>
+
+				<a href="/my-account?signup">
+					<button class="wooks__button header__signup">Sign up</button>
+				</a>
+			
+				<a href="<?= wc_get_cart_url() ?>">
+					<img class="menu__shoppingcart" src="<?php echo THEME_URL; ?>/resources/images/icons/shoppingcart_black.svg" alt="Shopping cart">
+				</a>
+			</nav>
 		</div>
+
 	</header>
