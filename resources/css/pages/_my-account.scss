@@ -1,0 +1,39 @@
+.my-account {
+    section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: $extreme-gap;
+        padding-top: 13vh;
+        padding-bottom: 20vh;
+    }
+    .section__info { //General element
+        .info__subtitle {
+            font-family: $font-title;
+            font-size: 26px;
+            color: #585858;
+        }
+        .info__title {
+            font-family: $font-title;
+            font-size: 30px;
+            color: #000;
+            margin-bottom: $small-gap;
+        }
+        .info__line {
+            width: 50%;
+            margin-left: 0;
+            border: solid 1.5px $primary;
+            border-radius: $infinty;
+        }
+        .info__text {
+            color: #707070;
+            width: 75%;
+        }
+    }
+    .section__form { //General element
+        .woocommerce-privacy-policy-text {
+            color: #707070;
+            width: 75%;
+            margin: $small-gap 0;
+        }
+    }
+}

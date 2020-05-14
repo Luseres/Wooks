@@ -1,0 +1,111 @@
+.woocommerce-result-count, .orderby, .woocommerce-breadcrumb {
+    display: none;
+}
+section {
+    padding-top: 50px;
+}
+
+.subscriptions {
+
+    .subscriptions__title {
+        font-size: 30px;
+        margin-bottom: $small-gap;
+        color: #000;
+        font-family: $font-title;
+    }
+    .subscriptions__subtitle {
+        color: #707070;
+        font-weight: 300;
+        margin-bottom: $huge-gap;
+    }
+    .page-numbers {
+        display: block;
+        margin-top: $huge-gap;
+        text-align: center;
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+        .page-numbers {
+            padding: 15px 20px;
+            font-family: $font-default;
+            font-weight: 600;
+            transition: ease .3s color, ease .3s background-color;
+        }
+        .page-numbers:hover {
+            color: #FFF;
+            background-color: #000;
+        }
+        .current {
+            color: #FFF;
+            background-color: #000;
+        }
+        .prev, .next {
+            visibility: hidden;
+        }
+        .prev:hover, .next:hover {
+            color: #000;
+        }
+        .next::after {
+            content: "Next";
+            visibility: visible;
+        }
+        .prev::after {
+            content: "Previous";
+            visibility: visible;
+        }
+    }
+
+    .products {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: $extreme-gap;
+        grid-row-gap: $huge-gap;
+
+        .product {
+            position: relative;
+            box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.17);
+            background-color: #FFFFFF;
+
+            a, ins {
+                text-decoration: none;
+            }
+            img {
+                padding: 40px;
+                width: calc(100% - 80px);
+                background-color: #F3F3F3;
+                object-fit: contain;
+            }
+            .woocommerce-loop-product__title {
+                padding: 15px 15px 0 15px;
+                color: #000000;
+                width: calc(100% - 70px);
+            }
+            .price {
+                display: block;
+                padding: 0 15px 15px 15px;
+                color: #DA1A5A;
+                width: calc(100% - 70px);
+            }
+            .onsale {
+                display: none;
+            }
+            .add_to_cart_button {
+                visibility: hidden;
+                position: absolute;
+                width: 100%;
+            }
+            .add_to_cart_button::after { 
+                visibility: visible;
+                position: absolute;
+                right: 15px;
+                top: -55px;
+                content: url('images/icons/arrow_right_yellow.svg');
+            }
+        }
+    }
+}
