@@ -1,23 +1,21 @@
 {
-    "name": "wooks",
-    "version": "1.0.0",
-    "description": "Wooks Wordpress Theme",
-    "main": "index.js",
-    "dependencies": {
-        "rfs": "^9.0.2"
-    },
-    "devDependencies": {},
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Luseres/Wooks.git"
-    },
-    "author": "Joshua van der Poll",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/Luseres/Wooks/issues"
-    },
-    "homepage": "https://github.com/Luseres/Wooks#readme"
+  "name": "wooks",
+  "version": "1.0.0",
+  "description": "Wooks Wordpress Theme",
+  "main": "main.js",
+  "dependencies": [],
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luseres/Wooks.git"
+  },
+  "author": "Joshua van der Poll",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Luseres/Wooks/issues"
+  },
+  "homepage": "https://github.com/Luseres/Wooks#readme"
 }

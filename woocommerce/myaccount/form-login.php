@@ -60,8 +60,9 @@
                     <?php do_action('woocommerce_login_form_end'); ?>
                 </form>
             </div>
-        <?php } else { ?>
-            <p>Coming Soon</p>
-        <?php } ?>
+        <?php } else {
+            wp_redirect("/my-account/?signin");
+            exit();
+        } ?>
     </section>
 </main>
