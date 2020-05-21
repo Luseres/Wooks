@@ -26,24 +26,24 @@
 
 <body <?php body_class(); ?>>
 	<header class="header">
-		<a href="/" class="header__logo">
+		<a href="<?= get_site_url() ?>" class="header__logo">
 			<img src="<?php echo THEME_URL; ?>/resources/images/logo_color.svg" alt="">
 		</a>
 
 		<div class="desktop-menu">
-			<a href="/" class="menu__link menu__link--active">
+			<a href="<?= get_site_url() ?>" class="menu__link menu__link--active">
 				Home
 			</a>
 
-			<a href="/subscriptions" class="menu__link">
+			<a href="<?= get_site_url() ?>/subscriptions" class="menu__link">
 				Subscriptions
 			</a>
 
-			<a href="/my-account?signin" class="menu__link">
+			<a href="<?= get_site_url() ?>/my-account?signin" class="menu__link">
 				Sign in
 			</a>
 
-			<a href="/my-account?signup">
+			<a href="<?= get_site_url() ?>/my-account?signup">
 				<button class="wooks__button header__signup">Sign up</button>
 			</a>
 

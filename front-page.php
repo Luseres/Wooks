@@ -7,8 +7,8 @@
 		<div class="main__content">
 			<h1 class="main__title">Books for everyone</h1>
 			<p class="main__description">Wooks is a subscription company that brings you quality, new books to your doorstep every month.</p>
-			<a class="wooks__button-link" href="/subscriptions"><button class="wooks__button wooks__button--cta">Start an trail subscriptions</button></a>
-			<a href="/my-account?signin" class="main__signin">Sign in to Wooks</a>
+			<a class="wooks__button-link" href="<?= get_site_url() ?>/subscriptions"><button class="wooks__button wooks__button--cta">Start an trail subscriptions</button></a>
+			<a href="<?= get_site_url() ?>/my-account?signin" class="main__signin">Sign in to Wooks</a>
 		</div>
 	</section>
 	<section class="section__reasons">
