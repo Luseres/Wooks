@@ -17,6 +17,8 @@
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<link rel="stylesheet" href="<?php echo THEME_URL; ?>/resources/app.css">
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 	<script src="<?php echo THEME_URL; ?>/resources/js/animations.js"></script>
 	<title><?= bloginfo('name'); ?> • Books for everyone</title>
 	<link rel="shortcut icon" href="<?php echo get_site_icon_url(); ?>" />

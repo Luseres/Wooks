@@ -1,4 +1,4 @@
-<main class="my-account">
+<main class="my-account fadein-slideup">
     <section>
         <?php if (isset($_GET['signup'])) { ?>
             <div class="method--signup section__info">

@@ -4,8 +4,8 @@ do_action('woocommerce_before_main_content');
 ?>
 <main class="subscriptions">
     <section>
-        <p class="subscriptions__title">Our subscriptions</p>
-        <p class="subscriptions__subtitle">You can select your book type after selecting subscription.</p>
+        <p class="subscriptions__title fadein-slideup">Our subscriptions</p>
+        <p class="subscriptions__subtitle fadein-slideup">You can select your book type after selecting subscription.</p>
         <?php
         if (woocommerce_product_loop()) {
             do_action('woocommerce_before_shop_loop');

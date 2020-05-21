@@ -114,7 +114,7 @@ img {
     border: solid 1px #C4C4C4;
     font-size: 16px;
     letter-spacing: 1px;
-    line-height: 24px;
+    line-height: 26px;
     width: 75%;
 }
 .wooks__label {
@@ -126,4 +126,17 @@ img {
 }
 .woocommerce-notices-wrapper {
     display: none; //No thank you we dont need notifications...
+}
+
+.wooks__title {
+    font-family: $font-title;
+    font-size: 30px;
+    color: #000;
+    margin-bottom: $small-gap;
+}
+.wooks__subtitle {
+    font-family: $font-title;
+    font-size: 27px;
+    color: #707070;
+    margin-bottom: $small-gap;
 }
