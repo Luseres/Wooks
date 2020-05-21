@@ -1,0 +1,13 @@
+.slideup {
+    transform: translateY(30px);
+    transition: transform ease 1.3s;
+}
+.fadein {
+    opacity: 0;
+    transition: opacity ease 1s;
+}
+.fadein-slideup {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity ease 1.3s, transform ease 1s;
+}

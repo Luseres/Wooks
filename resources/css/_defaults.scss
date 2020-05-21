@@ -2,12 +2,22 @@ html {
     scroll-behavior: smooth;
 }
 
-* {
+p, h1, h2, h3, a {
     font-family: $font-default;
+    font-size: 18px;
+    letter-spacing: .818px;
+    line-height: 24px;
+    padding: 5px 0;
 }
 
-.section {
-    padding: 50px 15vw;
+section, footer, header {
+    display: block;
+    margin: 0 auto;
+    max-width: 1250px;
+    padding: 0 10vw;
+}
+section {
+    padding: 100px 10vw;
 }
 
 .error {
@@ -27,4 +37,106 @@ html {
 
 img {
     max-width: 100%;
+    object-fit: cover;
+}
+
+.error__page {
+    .page__error {
+        text-align: center;
+        padding: 27.5vh 0 0 0;
+        font-family: $font-title;
+        font-size: 50px;
+    }
+    .page__error-link {
+        text-align: center;
+        font-family: $font-title;
+        font-size: 50px;
+        color: #333;
+    }
+    .page__error-text {
+        padding: 16px 0 27vh 0;
+    }
+}
+
+.wooks__button {
+    background-color: $primary;
+    color: #FFF;
+    padding: 10px 0 10px 30px;
+    border-radius: 3px;
+    border: none;
+    box-shadow: 1px 5px 0px -1px rgba(184,56,99,1);
+    font-family: $font-title;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 24px;
+    transition: background-color ease .2s, transform ease .2s;
+}
+.wooks__button:hover {
+    background-color: darken($color: $primary, $amount: 3%);
+    transform: scale(.985);
+}
+.wooks__button:active {
+    background-color: darken($color: $primary, $amount: 6%);
+    transform: scale(.965);
+}
+.wooks__button::after {
+    content: url("./images/icons/triangle_white.svg");
+    background-color: #BA1A5A;
+    object-fit: cover;
+    padding: 10px 20px;
+    height: 20px;
+    width: 20px;
+    margin-left: 30px;
+    box-shadow: 1px 5px 0px -1px rgba(121,31,67,1);
+}
+
+.wooks__button--cta {
+    background-color: $secondary;
+    box-shadow: 1px 5px 0px -1px rgba(216,170,78,1);
+}
+.wooks__button--cta:hover {
+    background-color: darken($color: $secondary, $amount: 3%);
+}
+.wooks__button--cta:active {
+    background-color: darken($color: $secondary, $amount: 6%);
+}
+.wooks__button--cta::after {
+    background-color: #DBA028;
+    box-shadow: 1px 5px 0px -1px #c79125;
+}
+
+
+.wooks__field {
+    background-color: #FFF;
+    color: #000;
+    padding: 9px 12px;
+    border-radius: 3px;
+    border: solid 1px #C4C4C4;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 26px;
+    width: 75%;
+}
+.wooks__label {
+    display: block;
+    margin-bottom: $smaller-gap;
+}
+.wooks__label .required {
+    color: red;
+}
+.woocommerce-notices-wrapper {
+    display: none; //No thank you we dont need notifications...
+}
+
+.wooks__title {
+    font-family: $font-title;
+    font-size: 30px;
+    color: #000;
+    margin-bottom: $small-gap;
+}
+.wooks__subtitle {
+    font-family: $font-title;
+    font-size: 27px;
+    color: #707070;
+    margin-bottom: $small-gap;
 }

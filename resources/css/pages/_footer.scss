@@ -1,0 +1,30 @@
+footer {
+    background-color: $back-footer;
+    color: #FFF;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    .footer__top {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: $small-gap;
+    }
+    .footer__bottom {
+        text-align: center;
+        color: #7E7E7E;
+    }
+
+    .footer__title {
+        font-family: $font-title;
+        font-size: 26px;
+    }
+    .footer__content {
+        color: #E2E2E2;
+    }
+    .footer__link {
+        color: #E2E2E2;
+        .footer__link-text {
+            padding: 0;
+        }
+    }
+}

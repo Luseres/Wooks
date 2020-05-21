@@ -15,7 +15,7 @@
 * Node modules
 */
 
-@import "../node_modules/rfs/scss";
+// @import "../node_modules/rfs/scss";
 
 /**
 * Default site styling
@@ -26,5 +26,18 @@
 @import "css/defaults";
 
 /**
-* Import custom pages
+* Page defaults
 */
+
+@import "css/pages/header";
+@import "css/pages/footer";
+@import "css/pages/animations";
+
+/**
+* Custom pages
+*/
+
+@import "css/pages/home";
+@import "css/pages/products";
+@import "css/pages/my-account";
+@import "css/pages/single-product";
