@@ -11,7 +11,7 @@ do_action('woocommerce_before_main_content');
     ?>
     <section class="product fadein-slideup">
         <div class="product__general">
-            <a class="product__return" href="/subscriptions">
+            <a class="product__return" href="<?= get_site_url() ?>/subscriptions">
                 <p>&lt; Return to subscriptions</p>
             </a>
             <h2 class="product__general__name wooks__title"><?= $product->name ?></h2>
