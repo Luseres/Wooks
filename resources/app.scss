@@ -2,7 +2,7 @@
 * Configuration
 */
 
-@import "css/variables";
+@import "css/ui/variables";
 
 /**
 * Usable functions
@@ -21,9 +21,9 @@
 * Default site styling
 */
 
-@import "css/reset";
-@import "css/fonts";
-@import "css/defaults";
+@import "css/ui/reset";
+@import "css/ui/fonts";
+@import "css/ui/defaults";
 
 /**
 * Page defaults
@@ -41,3 +41,4 @@
 @import "css/pages/products";
 @import "css/pages/my-account";
 @import "css/pages/single-product";
+@import "css/pages/shopping_cart";
