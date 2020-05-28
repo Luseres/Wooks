@@ -32,7 +32,7 @@
         }
         .main__title {
             font-family: $font-title;
-            font-size: 30px;
+            font-size: 40px;
             color: #000;
             margin-bottom: $small-gap;
         }
@@ -42,11 +42,14 @@
             font-family: $font-title;
             font-weight: 300;
         }
-        .wooks__button-link {
-            text-decoration: none;
+
+        .button--primary {
+            margin-top: 30px;
         }
+
         .main__signin {
             color: #000;
+            margin-top: 20px;
         }
     }
     .section__reasons {
