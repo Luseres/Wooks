@@ -17,7 +17,7 @@ do_action('woocommerce_before_main_content');
             <h2 class="product__general__name wooks__title"><?= $product->name ?></h2>
             <a data-fancybox="gallery" href="<?= wp_get_attachment_image_src($product->image_id, 'full')[0] ?>"><img src="<?= wp_get_attachment_image_src($product->image_id, 'full')[0] ?>" alt="<?= $product->name; ?>" class="product__general__image"></a>
         </div>
-        <div class="product__info">
+        <div class="product__info product-section">
             <p class="product__info__name wooks__subtitle"><?= $product->name ?></p>
             <span class="product__info__price">
                 <p class="product__info__price__value">€<?= $product->sale_price ?>-</p>
