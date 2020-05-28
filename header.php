@@ -43,8 +43,10 @@
 				Sign in
 			</a>
 
-			<a href="<?= get_site_url() ?>/my-account?signup">
-				<button class="wooks__button header__signup">Sign up</button>
+			<a class="no-decoration" href="<?= get_site_url() ?>/my-account?signup">
+				<button class="button button--secondary header__signup">
+					<span>Sign up</span>
+				</button>
 			</a>
 
 			<a href="<?= wc_get_cart_url() ?>">
