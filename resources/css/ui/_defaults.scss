@@ -155,19 +155,22 @@ img {
 
 // Button
 .button {
-    border: none;
-    background: none;
-    padding: 0;
-    position: relative;
-    color: #fff;
-    height: 50px;
     display: flex;
     align-items: center;
+    position: relative;
+
+    border: none;
+    background: none;
+
+    color: #fff;
+    height: 50px;
+    padding: 0;
+
     font-family: $font-title;
 
     box-sizing: border-box;
-
     outline: none;
+    transition: background .3s ease-out;
 
     span {
         padding: 0 30px;
@@ -183,18 +186,34 @@ img {
     }
 
     &--primary {
-        background: linear-gradient(to bottom, #FEC327, #F8D26B);
-        box-shadow: 0 5px 0px 0 #D8AA4E;
+        background: linear-gradient(to right, #DBA028 30%, #FEC327 10%, #F8D26B);
+        background-size: 300% 100%;
+        background-position-x: -300px;
+        box-shadow: 0 5px 0px 0 rgb(190, 149, 67);
         &::after {
             background: #DBA028;
+        }
+
+        &:hover,
+        &:focus {
+            background-position-x: 0px;
         }
     }
 
     &--secondary {
         background: #E35383;
-        box-shadow: 0 5px 0px 0 #B83863;
+        box-shadow: 0 5px 0px 0 rgb(126, 38, 68);
+
+        background: linear-gradient(to right, #BA1A5A 30%, #E35383 10%);
+        background-size: 300% 100%;
+        background-position-x: -300px;
         &::after {
             background: #BA1A5A;
+        }
+
+        &:hover,
+        &:focus {
+            background-position-x: 0px;
         }
     }
 }
