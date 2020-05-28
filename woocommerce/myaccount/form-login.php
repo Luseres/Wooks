@@ -23,7 +23,9 @@
                     <?php do_action('woocommerce_register_form'); ?>
                     <p class="woocommerce-form-row form-row">
                         <?php wp_nonce_field('woocommerce-register', 'woocommerce-register-nonce'); ?>
-                        <button type="submit" class="wooks__button woocommerce-Button woocommerce-button button woocommerce-form-register__submit" name="register" value="Sign up">Sign up</button>
+                        <button type="submit" class="button button--secondary woocommerce-Button woocommerce-button button woocommerce-form-register__submit" name="register" value="Sign up">
+                            <span>Sign up</span>
+                        </button>
                     </p>
                     <?php do_action('woocommerce_register_form_end'); ?>
                 </form>
@@ -52,7 +54,11 @@
                             <input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><?php esc_html_e('Remember me', 'woocommerce'); ?></span>
                         </label>
                         <?php wp_nonce_field('woocommerce-login', 'woocommerce-login-nonce'); ?>
-                        <button type="submit" class="wooks__button woocommerce-button button woocommerce-form-login__submit" name="login" value="<?php esc_attr_e('Log in', 'woocommerce'); ?>"><?php esc_html_e('Log in', 'woocommerce'); ?></button>
+                        <button type="submit" class="button button--secondary woocommerce-button button woocommerce-form-login__submit" name="login" value="<?php esc_attr_e('Log in', 'woocommerce'); ?>">
+                            <span>
+                                <?php esc_html_e('Sign in', 'woocommerce'); ?>
+                            </span>
+                        </button>
                     </p>
                     <p class="woocommerce-LostPassword lost_password">
                         <a href="<?php echo esc_url(wp_lostpassword_url()); ?>"><?php esc_html_e('Lost your password?', 'woocommerce'); ?></a>

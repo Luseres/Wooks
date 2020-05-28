@@ -60,11 +60,12 @@ img {
 
 .wooks__button {
     background-color: $primary;
+    background: #E35383;
     color: #FFF;
     padding: 10px 0 10px 30px;
     border-radius: 3px;
     border: none;
-    box-shadow: 1px 5px 0px -1px rgba(184,56,99,1);
+    box-shadow: 0 5px 0px 0 rgba(184,56,99,1);
     font-family: $font-title;
     font-size: 18px;
     letter-spacing: 1px;
@@ -87,7 +88,7 @@ img {
     height: 20px;
     width: 20px;
     margin-left: 30px;
-    box-shadow: 1px 5px 0px -1px rgba(121,31,67,1);
+    box-shadow: 0 5px 0px 0 rgba(121,31,67,1);
 }
 
 .wooks__button--cta {
@@ -104,7 +105,6 @@ img {
     background-color: #DBA028;
     box-shadow: 1px 5px 0px -1px #c79125;
 }
-
 
 .wooks__field {
     background-color: #FFF;
@@ -144,4 +144,57 @@ img {
     border: solid 1px $primary;
     width: 20%;
     margin: $medium-gap 0;
+}
+
+/* Modifiers */
+
+// Links
+.no-decoration {
+    text-decoration: none !important;
+}
+
+// Button
+.button {
+    border: none;
+    background: none;
+    padding: 0;
+    position: relative;
+    color: #fff;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-family: $font-title;
+
+    box-sizing: border-box;
+
+    outline: none;
+
+    span {
+        padding: 0 30px;
+    }
+
+    &::after {
+        content: url("./images/icons/triangle_white.svg");
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 50px;
+    }
+
+    &--primary {
+        background: linear-gradient(to bottom, #FEC327, #F8D26B);
+        box-shadow: 0 5px 0px 0 #D8AA4E;
+        &::after {
+            background: #DBA028;
+        }
+    }
+
+    &--secondary {
+        background: #E35383;
+        box-shadow: 0 5px 0px 0 #B83863;
+        &::after {
+            background: #BA1A5A;
+        }
+    }
 }
