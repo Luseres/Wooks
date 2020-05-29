@@ -1,9 +1,15 @@
-footer {
+.footer {
     background-color: $back-footer;
     color: #FFF;
-    padding: 60px 0;
+    padding: 30px 0;
     margin: 0;
 
+    &__link {
+        color: #E2E2E2;
+        &-text {
+            padding: 0;
+        }
+    }
 
     .contents {
         max-width: 1300px;
@@ -17,27 +23,22 @@ footer {
     
             max-width: 300px;
         }
-    
-        .footer__title {
-            font-family: $font-title;
-            font-size: 26px;
-        }
-        .footer__content {
-            color: #E2E2E2;
-        }
+    }
 
-        .footer__link {
-            color: #E2E2E2;
-            &-text {
-                padding: 0;
-            }
-        }
-    
-        .footer__copyright {
-            width: 100%;
-            text-align: center;
-            color: #7E7E7E;
-        }
+        
+    &__title {
+        font-family: $font-title;
+        font-size: 20px;
+    }
+
+    p {
+        color: #E2E2E2;
+    }
+
+    &__copyright {
+        width: 100%;
+        text-align: center;
+        color: #7E7E7E;
     }
 
 }
