@@ -2,7 +2,7 @@
     .product {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: center;
 
         @media screen and (min-width: 1030px) {
             display: grid;
@@ -15,18 +15,35 @@
             text-decoration: none;
             color: #616161;
             font-weight: 600;
+            font-size: 16px;
         }
         .product__return:hover {
             text-decoration: underline;
         }
-        .product__general__image {
-            padding: 40px;
-            width: 50%;
-            background-color: #F3F3F3;
-            object-fit: contain;
-            box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.17);
-            cursor: zoom-in;
+
+        &__general {
+            &__name {
+                font-size: 40px;
+                margin-bottom: 50px;
+                font-weight: normal;
+            }
+
+            
+            &__image {
+                padding: 40px;
+                width: 50%;
+                background-color: #F3F3F3;
+                object-fit: contain;
+                box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.17);
+                cursor: zoom-in;
+            }
+    }
+
+        &__info {
+            display: none;
+            margin-top: 60px;
         }
+
         .product__info__price {
             margin-left: $medium-gap;
             margin-bottom: $small-gap;
