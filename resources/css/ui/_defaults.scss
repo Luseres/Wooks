@@ -2,11 +2,17 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 p, h1, h2, h3, a {
     font-family: $font-default;
     font-size: 18px;
     letter-spacing: .818px;
-    line-height: 24px;
+    line-height: 24px;w
     padding: 5px 0;
 }
 
