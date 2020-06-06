@@ -2,6 +2,12 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 p, h1, h2, h3, a {
     font-family: $font-default;
     font-size: 18px;
@@ -10,12 +16,13 @@ p, h1, h2, h3, a {
     padding: 5px 0;
 }
 
-section, footer, header {
+section, header {
     display: block;
     margin: 0 auto;
     max-width: 1250px;
     padding: 0 10vw;
 }
+
 section {
     padding: 100px 10vw;
 }

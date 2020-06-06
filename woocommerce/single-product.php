@@ -12,18 +12,23 @@ do_action('woocommerce_before_main_content');
     <section class="product fadein-slideup">
         <div class="product__general">
             <a class="product__return" href="<?= get_site_url() ?>/subscriptions">
-                <p>&lt; Return to subscriptions</p>
+                &lt; Return to subscriptions
             </a>
             <h2 class="product__general__name wooks__title"><?= $product->name ?></h2>
             <a data-fancybox="gallery" href="<?= wp_get_attachment_image_src($product->image_id, 'full')[0] ?>"><img src="<?= wp_get_attachment_image_src($product->image_id, 'full')[0] ?>" alt="<?= $product->name; ?>" class="product__general__image"></a>
         </div>
-        <div class="product__info">
+
+        <div class="product__info product-section">
             <p class="product__info__name wooks__subtitle"><?= $product->name ?></p>
             <span class="product__info__price">
                 <p class="product__info__price__value">€<?= $product->sale_price ?>-</p>
                 <p class="product__info__price__value--sale">€<?= $product->regular_price ?>-</p>
             </span>
-            <a class="product__info__button__link" href="?add-to-cart=<?= $product->id ?>"><button class="wooks__button wooks__button--cta">Add to cart</button></a>
+            <a class="product__info__button__link no-decoration" href="?add-to-cart=<?= $product->id ?>">
+                <button class="button button--primary">
+                    <span>Add to cart</span>
+                </button>
+            </a>
             <p class="product__info__description">"<?= $product->description ?>"</p>
         </div>
     </section>
