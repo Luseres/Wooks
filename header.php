@@ -49,8 +49,9 @@
 				</button>
 			</a>
 
-			<a href="<?= wc_get_cart_url() ?>">
-				<img class="menu__shoppingcart" src="<?php echo THEME_URL; ?>/resources/images/icons/shoppingcart_black.svg" alt="Shopping cart">
+			<a href="<?= wc_get_cart_url() ?>" class="header__shoppingcart">
+				<img class="header__shoppingcart__image" src="<?php echo THEME_URL; ?>/resources/images/icons/shoppingcart_black.svg" alt="Shopping cart">
+				<span class="header__shoppingcart__number">3</span>
 			</a>
 		</div>
 
