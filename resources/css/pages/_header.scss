@@ -3,13 +3,9 @@
     align-items: center;
     color: #767676;
     padding: 20px 0;
-    margin: 0 20px;
+    margin: 0;
 
     width: 100%;
-
-    @media screen and (min-width: 1200px) {
-        margin: 0 auto;
-    }
 
     &__logo {
         height: auto;
@@ -24,7 +20,7 @@
         font-weight: 500;
         color: #767676;
         overflow: hidden;
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: 1000px) {
             margin-right: $huge-gap;
         }
         transition: color ease .2s, transform ease .2s;
@@ -57,8 +53,8 @@
         &__image {
             height: 50px;
             width: 50px;
-            @media screen and (min-width: 1200px) {
-                margin-left: 20px;
+            @media screen and (min-width: 1000px) {
+                // margin-left: 20px;
             }
         }
 
@@ -69,8 +65,7 @@
             border-radius: 50%;
             background: #ff7ea9;
             color: #fff;
-            font-size: .9em;
-            font-family: $font-default;
+            font-size: .9x;
             width: 25px;
             height: 25px;
             display: flex;
