@@ -11,3 +11,12 @@
     transform: translateY(30px);
     transition: opacity ease-out .8s, transform ease-out .4s;
 }
+
+@keyframes slideFromBottom {
+    0% {
+      transform: translateY(200%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}

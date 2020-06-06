@@ -1,0 +1,33 @@
+
+.woocommerce-notices-wrapper {
+    font-family: $font-title;
+    color: #FFF;
+    .woocommerce-error {
+        animation: 1s ease-out 0s 1 slideFromBottom;
+        position: fixed;
+        bottom: $small-gap;
+        right: $small-gap;
+        z-index: 99;
+        width: 33%;
+        background-color: #C9252D;
+        box-shadow: 0 3px 4px rgba(0,0,0,.4);
+        padding: $small-gap;
+        li {
+            margin-bottom: $smaller-gap;
+        }
+    }
+    .woocommerce-message {
+        animation: 1s ease-out 0s 1 slideFromBottom;
+        position: fixed;
+        bottom: $small-gap;
+        right: $small-gap;
+        z-index: 99;
+        width: 33%;
+        background-color: #30D19C;
+        box-shadow: 0 3px 4px rgba(0,0,0,.4);
+        padding: $small-gap;
+        li {
+            margin-bottom: $smaller-gap;
+        }
+    }
+}
