@@ -35,6 +35,14 @@ section {
     color: green;
 }
 
+.required {
+    color: red;
+    text-decoration: none;
+}
+abbr[title] {
+    border-bottom: none;
+}
+
 .search__error {
     font-size: 1.5em;
     text-align: center;
