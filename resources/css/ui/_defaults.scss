@@ -12,12 +12,15 @@ body {
 p, h1, h2, h3, a {
     font-family: $font-default;
     font-size: 18px;
+    @media screen and (max-height: 800px) {
+        font-size: 16px;
+    }
     letter-spacing: .818px;
     line-height: 24px;
     padding: 5px 0;
 }
 
-section, header {
+section {
     display: block;
     margin: 0 auto;
     max-width: 1250px;

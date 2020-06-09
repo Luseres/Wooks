@@ -2,8 +2,10 @@
     display: flex;
     align-items: center;
     color: #767676;
-    padding: 20px 0;
+    padding: 20px 10px;
+    box-sizing: border-box;
     margin: 0;
+    max-width: 1400px;
 
     width: 100%;
 
@@ -20,8 +22,8 @@
         font-weight: 500;
         color: #767676;
         overflow: hidden;
-        @media screen and (min-width: 1000px) {
-            margin-right: $huge-gap;
+        @media screen and (min-width: 800px) {
+            margin-right: 50px;
         }
         transition: color ease .2s, transform ease .2s;
 
@@ -50,6 +52,7 @@
 
     &__shoppingcart {
         position: relative;
+        margin-left: 20px;
         &__image {
             height: 50px;
             width: 50px;
@@ -154,7 +157,7 @@
         }
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 800px) {
         .desktop-menu {
             display: flex;
         }
