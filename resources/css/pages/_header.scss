@@ -1,15 +1,18 @@
 .header {
-    display: flex;
-    align-items: center;
     color: #767676;
     padding: 20px 10px;
     box-sizing: border-box;
     margin: 0;
     max-width: 1400px;
-
     width: 100%;
 
-    &__logo {
+    & > div {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
         height: auto;
         width: 50px;
         object-fit: cover;
@@ -108,26 +111,6 @@
             }
         }
     }
-    
-
-    // Mobile menu events
-    #nav-checkbox:checked ~ .mobile-menu__nav {
-        display: flex;
-    }
-
-    #nav-checkbox:checked ~ .hamburger-menu {
-        div {
-            &:nth-child(1) {
-                transform: translateY(15px) rotate(-225deg);
-            }
-            &:nth-child(2) {
-                opacity: 0;
-            }
-            &:nth-child(3) {
-                transform: translateY(15px) rotate(225deg);
-            }
-        }
-    }
 
     .hamburger-menu {
         z-index: 9999;
@@ -157,6 +140,24 @@
         }
     }
 
+    #nav-checkbox:checked ~ .mobile-menu__nav {
+        display: flex;
+    }
+
+    #nav-checkbox:checked ~ .hamburger-menu {
+        div {
+            &:nth-child(1) {
+                transform: translateY(15px) rotate(-225deg);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                transform: translateY(15px) rotate(225deg);
+            }
+        }
+    }
+
     @media screen and (min-width: 800px) {
         .desktop-menu {
             display: flex;
@@ -164,6 +165,17 @@
 
         .mobile-menu {
             display: none;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        position: sticky;
+        z-index: 9999;
+        top: 0;
+        padding-top: 0;
+        
+        &__logo {
+            width: 30px;
         }
     }
 }

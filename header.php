@@ -30,11 +30,11 @@ $items = $woocommerce->cart->get_cart();
 
 <body <?php body_class(); ?>>
 	<header class="header">
-		<a href="<?= get_site_url() ?>" class="header__logo">
-			<img src="<?php echo THEME_URL; ?>/resources/images/logo_color.svg" alt="">
-		</a>
-
 		<div class="desktop-menu">
+			<a href="<?= get_site_url() ?>" class="logo">
+				<img src="<?php echo THEME_URL; ?>/resources/images/logo_color.svg" alt="">
+			</a>
+
 			<a href="<?= get_site_url() ?>" class="menu__link menu__link--active">
 				Home
 			</a>
@@ -60,6 +60,10 @@ $items = $woocommerce->cart->get_cart();
 		</div>
 
 		<div class="mobile-menu">
+			<a href="<?= get_site_url() ?>" class="logo">
+				<img src="<?php echo THEME_URL; ?>/resources/images/logo_color.svg" alt="">
+			</a>
+
 			<input type="checkbox" id="nav-checkbox" style="display: none">
 			<label for="nav-checkbox" class="hamburger-menu">
 				<div></div>
