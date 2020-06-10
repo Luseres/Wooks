@@ -4,7 +4,6 @@ global $wp;
 $items = $woocommerce->cart->get_cart();
 $routes = explode('/', $_SERVER['REQUEST_URI']);
 $current_route = (end($routes) != '') ? end($routes) : $routes[count($routes)-2];
-echo $current_route;
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>
