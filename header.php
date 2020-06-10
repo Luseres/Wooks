@@ -1,6 +1,10 @@
 <?php
 global $woocommerce;
+global $wp;
 $items = $woocommerce->cart->get_cart();
+$routes = explode('/', $_SERVER['REQUEST_URI']);
+$current_route = (end($routes) != '') ? end($routes) : $routes[count($routes)-2];
+echo $current_route;
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>
@@ -30,36 +34,40 @@ $items = $woocommerce->cart->get_cart();
 
 <body <?php body_class(); ?>>
 	<header class="header">
-		<a href="<?= get_site_url() ?>" class="header__logo">
-			<img src="<?php echo THEME_URL; ?>/resources/images/logo_color.svg" alt="">
-		</a>
-
 		<div class="desktop-menu">
-			<a href="<?= get_site_url() ?>" class="menu__link menu__link--active">
+			<a href="<?= get_site_url() ?>" class="logo">
+				<img src="<?php echo THEME_URL; ?>/resources/images/logo_color.svg" alt="">
+			</a>
+
+			<a href="<?= get_site_url() ?>" class="menu__link <?php if (is_front_page()) echo "route--active"; ?>">
 				Home
 			</a>
 
-			<a href="<?= get_site_url() ?>/subscriptions" class="menu__link">
+			<a href="<?= get_site_url() ?>/subscriptions" class="menu__link <?php if ($current_route == 'subscriptions') echo "route--active"; ?>">
 				Subscriptions
 			</a>
 
-			<a href="<?= get_site_url() ?>/my-account?signin" class="menu__link">
+			<a href="<?= get_site_url() ?>/my-account?signin" class="menu__link <?php if ($current_route == '?signin') echo "route--active"; ?>">
 				Sign in
 			</a>
 
-			<a class="no-decoration" href="<?= get_site_url() ?>/my-account?signup">
+			<a href="<?= get_site_url() ?>/my-account?signup" class="no-decoration <?php if ($current_route == '?signup') echo "route--active"; ?>">
 				<button class="button button--secondary header__signup">
 					<span>Sign up</span>
 				</button>
 			</a>
 
-			<a href="<?= wc_get_cart_url() ?>" class="header__shoppingcart">
+			<a href="<?= wc_get_cart_url() ?>" class="header__shoppingcart <?php if ($current_route == 'cart') echo "route--active"; ?>">
 				<img class="header__shoppingcart__image" src="<?php echo THEME_URL; ?>/resources/images/icons/shoppingcart_black.svg" alt="Shopping cart">
 				<span class="header__shoppingcart__number"><?= $woocommerce->cart->cart_contents_count ?></span>
 			</a>
 		</div>
 
 		<div class="mobile-menu">
+			<a href="<?= get_site_url() ?>" class="logo">
+				<img src="<?php echo THEME_URL; ?>/resources/images/logo_color.svg" alt="">
+			</a>
+
 			<input type="checkbox" id="nav-checkbox" style="display: none">
 			<label for="nav-checkbox" class="hamburger-menu">
 				<div></div>
@@ -68,24 +76,25 @@ $items = $woocommerce->cart->get_cart();
 			</label>
 
 			<nav class="mobile-menu__nav">
-				<a href="/" class="menu__link menu__link--active">
+				<a href="/" class="menu__link <?php if (is_front_page()) echo "route--active"; ?>">
 					Home
 				</a>
 
-				<a href="/subscriptions" class="menu__link">
+				<a href="/subscriptions" class="menu__link <?php if ($current_route == 'subscriptions') echo "route--active"; ?>">
 					Subscriptions
 				</a>
 
-				<a href="/my-account?signin" class="menu__link">
+				<a href="/my-account?signin" class="menu__link <?php if ($current_route == '?signin') echo "route--active"; ?>">
 					Sign in
 				</a>
 
-				<a href="/my-account?signup">
-					<button class="wooks__button header__signup">Sign up</button>
+				<a href="/my-account?signup" class="menu__link <?php if ($current_route == '?signup') echo "route--active"; ?>">
+					Sign up
 				</a>
 
-				<a href="<?= wc_get_cart_url() ?>">
-					<img class="menu__shoppingcart" src="<?php echo THEME_URL; ?>/resources/images/icons/shoppingcart_black.svg" alt="Shopping cart">
+				<a href="<?= wc_get_cart_url() ?>" class="shoppingcart-link <?php if ($current_route == 'cart') echo "route--active"; ?>">
+					<span>Shoppingcart</span>
+					<img src="<?php echo THEME_URL; ?>/resources/images/icons/shoppingcart_black.svg" alt="Shopping cart">
 				</a>
 			</nav>
 		</div>
