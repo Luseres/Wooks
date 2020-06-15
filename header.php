@@ -47,6 +47,9 @@ $current_route = (end($routes) != '') ? end($routes) : $routes[count($routes) - 
 			</a>
 
 			<?php if (is_user_logged_in()) : ?>
+				<a href="<?= get_site_url() ?>/genre-finder" class="menu__link">
+					Find your genre
+				</a>
 				<a href="<?= get_site_url() ?>/my-account" class="menu__link">
 					My Account
 				</a>
@@ -94,6 +97,9 @@ $current_route = (end($routes) != '') ? end($routes) : $routes[count($routes) - 
 
 
 				<?php if (is_user_logged_in()) : ?>
+					<a href="<?= get_site_url() ?>/genre-finder" class="menu__link">
+						Genre Finder
+					</a>
 					<a href="<?= get_site_url() ?>/my-account" class="menu__link">
 						My Account
 					</a>
