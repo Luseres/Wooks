@@ -3,7 +3,7 @@ global $woocommerce;
 global $wp;
 $items = $woocommerce->cart->get_cart();
 $routes = explode('/', $_SERVER['REQUEST_URI']);
-$current_route = (end($routes) != '') ? end($routes) : $routes[count($routes)-2];
+$current_route = (end($routes) != '') ? end($routes) : $routes[count($routes) - 2];
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>
@@ -46,15 +46,24 @@ $current_route = (end($routes) != '') ? end($routes) : $routes[count($routes)-2]
 				Subscriptions
 			</a>
 
-			<a href="<?= get_site_url() ?>/my-account?signin" class="menu__link <?php if ($current_route == '?signin') echo "route--active"; ?>">
-				Sign in
-			</a>
+			<?php if (is_user_logged_in()) : ?>
+				<a href="<?= get_site_url() ?>/my-account" class="menu__link">
+					My Account
+				</a>
+				<a href="<?= wp_logout_url('/my-account/?signin') ?>" class="menu__link">
+					Logout
+				</a>
+			<?php else : ?>
+				<a href="<?= get_site_url() ?>/my-account?signin" class="menu__link <?php if ($current_route == '?signin') echo "route--active"; ?>">
+					Sign in
+				</a>
+				<a href="<?= get_site_url() ?>/my-account?signup" class="no-decoration <?php if ($current_route == '?signup') echo "route--active"; ?>">
+					<button class="button button--secondary header__signup">
+						<span>Sign up</span>
+					</button>
+				</a>
+			<?php endif; ?>
 
-			<a href="<?= get_site_url() ?>/my-account?signup" class="no-decoration <?php if ($current_route == '?signup') echo "route--active"; ?>">
-				<button class="button button--secondary header__signup">
-					<span>Sign up</span>
-				</button>
-			</a>
 
 			<a href="<?= wc_get_cart_url() ?>" class="header__shoppingcart <?php if ($current_route == 'cart') echo "route--active"; ?>">
 				<img class="header__shoppingcart__image" src="<?php echo THEME_URL; ?>/resources/images/icons/shoppingcart_black.svg" alt="Shopping cart">
@@ -83,13 +92,24 @@ $current_route = (end($routes) != '') ? end($routes) : $routes[count($routes)-2]
 					Subscriptions
 				</a>
 
-				<a href="/my-account?signin" class="menu__link <?php if ($current_route == '?signin') echo "route--active"; ?>">
-					Sign in
-				</a>
 
-				<a href="/my-account?signup" class="menu__link <?php if ($current_route == '?signup') echo "route--active"; ?>">
-					Sign up
-				</a>
+				<?php if (is_user_logged_in()) : ?>
+					<a href="<?= get_site_url() ?>/my-account" class="menu__link">
+						My Account
+					</a>
+					<a href="<?= wp_logout_url('/my-account/?signin') ?>" class="menu__link">
+						Logout
+					</a>
+				<?php else : ?>
+					<a href="<?= get_site_url() ?>/my-account?signin" class="menu__link <?php if ($current_route == '?signin') echo "route--active"; ?>">
+						Sign in
+					</a>
+					<a href="<?= get_site_url() ?>/my-account?signup" class="no-decoration <?php if ($current_route == '?signup') echo "route--active"; ?>">
+						<button class="button button--secondary header__signup">
+							<span>Sign up</span>
+						</button>
+					</a>
+				<?php endif; ?>
 
 				<a href="<?= wc_get_cart_url() ?>" class="shoppingcart-link <?php if ($current_route == 'cart') echo "route--active"; ?>">
 					<span>Shoppingcart</span>
