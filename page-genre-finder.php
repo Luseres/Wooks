@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <main class="genre-finder">
-    <h1>Preferences</h1>
+    <h1>What subscription should I take?</h1>
     <form action=" " name="genrefinder" method="post">
         <label for="" class="wooks__label">
             Favourite type of genre?
