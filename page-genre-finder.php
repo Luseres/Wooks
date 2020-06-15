@@ -1,19 +1,19 @@
 <?php get_header(); ?>
 <main class="genre-finder">
     <h1>Preferences</h1>
-    <form action=" " method="post">
+    <form action=" " name="genrefinder" method="post">
         <label for="" class="wooks__label">
             Favourite type of genre?
         </label>
-        <select class="wooks__field">
-            <option selected>Select your favorite genre...</option>
-            <option>Action</option>
-            <option>Chick lit</option>
-            <option>Fairytale</option>
-            <option>Fiction</option>
-            <option>Horror</option>
-            <option>Romance</option>
-            <option>Thriller</option>
+        <select class="wooks__field" name="genre" id="genre">
+            <option value="null" selected>Select your favorite genre...</option>
+            <option value="Action">Action</option>
+            <option value="Chick lit">Chick lit</option>
+            <option value="Fairytale">Fairytale</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Horror">Horror</option>
+            <option value="Romance">Romance</option>
+            <option value="Thriller">Thriller</option>
         </select>
         <label for="" class="wooks__label">
             How often do you read books?
@@ -48,4 +48,23 @@
         </a>
     </form>
 </main>
+<div class="genre-modal">
+    <div class="modal-box">
+        <h2>Find your genre result:</h2>
+        <p>We recommend trying out the genre: <span id="changeme"></span>
+        </p>
+        <button id="closemodal">X</button>
+    </div>
+</div>
+<script>
+    $("form").submit(function(e) {
+        e.preventDefault();
+        document.getElementById('changeme').innerHTML = document.getElementById('genre').value;
+        $(".genre-modal").css("display", "block");
+    });
+
+    $("#closemodal").on('click', function(e) {
+        $(".genre-modal").css("display", "none");
+    })
+</script>
 <?php get_footer(); ?>
