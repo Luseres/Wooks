@@ -15,24 +15,44 @@
 			<a href="<?= get_site_url() ?>/my-account?signin" class="main__signin">Sign in to Wooks</a>
 		</div>
 	</section>
-	<section class="section__reasons">
 
+	<div class="reasons">
 		<?php
 		$query = new WP_Query(array(
 			'post_type' => 'reasons',
 			'posts_per_page' => -1
-		)); ?>
-		<?php if ($query->have_posts()) : ?>
-			<?php while ($query->have_posts()) : $query->the_post(); ?>
+		));
+		$i = 0;
+		if ($query->have_posts()) :
+			while ($query->have_posts()) : $query->the_post(); 				 
+				?>
 				<div class="reasons__reason fadein-slideup">
-					<img class="reason__image" src="<?= wp_get_attachment_image_src(get_post_thumbnail_id(get_the_id()), "size")[0]; ?>" alt="<?php the_title(); ?>">
-					<p class="reason__reason"><?php the_title(); ?></p>
-					<p class="reason__explained"><?php echo wp_filter_nohtml_kses(get_the_content()); ?></p>
+					<div class="background"></div>
+					<div class="contents">
+						<?php if ($i == 1) : ?>
+							<div class="img-box">
+								<img src="<?= wp_get_attachment_image_src(get_post_thumbnail_id(get_the_id()), "size")[0]; ?>" alt="<?php the_title(); ?>">
+							</div>
+							<div class="heading">
+								<h2><?php the_title(); ?></h2>
+								<p><?php echo wp_filter_nohtml_kses(get_the_content()); ?></p>
+							</div>
+						<?php else : ?>
+							<div class="heading">
+								<h2><?php the_title(); ?></h2>
+								<p><?php echo wp_filter_nohtml_kses(get_the_content()); ?></p>
+							</div>
+							<div class="img-box">
+								<img src="<?= wp_get_attachment_image_src(get_post_thumbnail_id(get_the_id()), "size")[0]; ?>" alt="<?php the_title(); ?>">
+							</div>
+						<?php endif; ?>
+					</div>
 				</div>
-			<?php endwhile; ?>
-			<?php wp_reset_query(); ?>
-		<?php endif; ?>
-
-	</section>
+				<?php
+				$i++;
+			endwhile;
+			wp_reset_query();
+		endif; ?>
+	</div>
 </main>
 <?php get_footer(); ?>

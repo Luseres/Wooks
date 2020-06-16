@@ -1,5 +1,5 @@
-
 .homepage {
+    width: 100%;
     .section__main {
         display: flex;
         flex-direction: column;
@@ -52,37 +52,121 @@
             margin-top: 20px;
         }
     }
-    .section__reasons {
-        background-color: $back-sec;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        @media screen and (min-width: 1200px) {
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        .reasons__reason {
-            max-width: 500px;
-            margin: 30px 0;
-            color: #000;
-            text-align: center;
-            @media screen and (min-width: 1200px) {
-                max-width: 300px;
-                margin: 0;
+    // .section__reasons {
+    //     background-color: $back-sec;
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     @media screen and (min-width: 1200px) {
+    //         flex-direction: row;
+    //         justify-content: space-between;
+    //     }
+    //     .reasons__reason {
+    //         max-width: 500px;
+    //         margin: 30px 0;
+    //         color: #000;
+    //         text-align: center;
+    //         @media screen and (min-width: 1200px) {
+    //             max-width: 300px;
+    //             margin: 0;
+    //         }
+    //         .reason__image {
+    //             width: 100%;
+    //             height: 200px;
+    //             object-fit: contain;
+    //             margin-bottom: 8px;
+    //         }
+    //         .reason__reason {
+    //             font-family: $font-title;
+    //             font-size: 25px;
+    //             margin-bottom: 8px;
+    //         }
+    //         .reason__explained {
+    //             font-size: 16px;
+    //         }
+    //     }
+    // }
+
+    // aaaaaaaaa
+    .reasons {
+        width: 100%;
+        max-width: 100%;
+        padding: 50px 0 200px 0;
+        margin: 0;
+        &__reason {
+            position: relative;
+            color: #fff;
+            .img-box {
+                max-width: 400px;
+                background: #fff;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 50px;
+                img {
+                    max-width: 310px;
+                    width: 100%;
+                    height: 100%;
+                }
             }
-            .reason__image {
+            .contents {
+                max-width: 1400px;
                 width: 100%;
-                height: 200px;
-                object-fit: contain;
-                margin-bottom: 8px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                .heading {
+                    display: block;
+                    max-width: 300px;
+                    width: 100%;
+                    h2 {
+                        font-size: 2em;
+                        font-family: 'Bree Serif';
+                    }
+                }
             }
-            .reason__reason {
-                font-family: $font-title;
-                font-size: 25px;
-                margin-bottom: 8px;
+            .background {
+                z-index: -1;
+                position: absolute;
+                width: 200%;
+                height: 100%;
             }
-            .reason__explained {
-                font-size: 16px;
+            &:nth-child(1) {
+                .background {
+                    background: #E35383;
+                    transform: rotate(-4deg) translate(-20%, -30%);
+                }
+                .img-box {
+                    margin-top: -100px;
+                }
+                .heading {
+                    margin-right: auto;
+                    margin-top: 50px;
+                }
+            }
+
+            &:nth-child(2) {
+                margin: 100px 0;
+                color: #000;
+                .heading {
+                    margin-left: auto;
+                }
+            }
+
+            &:nth-child(3) {
+                .background {
+                    background: #E35383;
+                    transform: rotate(-4deg) translate(-20%, -30%);
+                }
+                .img-box {
+                    margin-top: -100px;
+                }
+                .heading {
+                    margin-right: auto;
+                    margin-top: 50px;
+                }
             }
         }
     }
