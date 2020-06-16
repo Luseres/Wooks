@@ -250,3 +250,14 @@
         width: 100%;
     }
 }
+.woocommerce-order-received {
+    .woocommerce-thankyou-order-received {
+        margin-bottom: $medium-gap;
+    }
+    section {
+        padding: $small-gap 0;
+    }
+    table {
+        width: 69%;
+    }
+}
