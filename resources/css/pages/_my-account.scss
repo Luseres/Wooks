@@ -108,6 +108,7 @@
         height: 100%;
         .welcome {
             padding: $huge-gap;
+            padding-bottom: 10px;
         }
 
         .welcome-msg {
@@ -129,6 +130,7 @@
         .dashboard-info {
             max-width: 550px;
             color: rgb(36, 36, 36);
+            padding: 0px 50px 40px 50px;
             a {
                 color: #000;
             }
@@ -161,6 +163,7 @@
         display: inline-block;
         color: #000;
         height: auto;
+        margin: 0 3px;
     }
     .woocommerce-orders-table__cell-order-actions a::after {
         content: '';
