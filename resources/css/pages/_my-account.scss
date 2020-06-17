@@ -42,15 +42,17 @@
 .logged-in.woocommerce-account {
     main {
         max-width: 1400px;
-        width: 100%;
         box-sizing: border-box;
         margin: 50px 0 100px;
         @media screen and (max-width: 1430px) {
             padding: 0 20px;
         }
+        @media screen and (min-width: 1400px) {
+            width: 100%;
+        }
     }
     .woocommerce {
-        @media screen and (min-width: 1400px) {
+        @media screen and (min-width: 1000px) {
             display: grid;
             grid-template-columns: 25% 75%;
             grid-gap: $huge-gap;            
@@ -103,7 +105,9 @@
     .woocommerce-MyAccount-content {
         box-sizing: border-box;
         box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.17);
-        // padding: $huge-gap;
+        @media screen and (min-width: 1400px) {
+            margin-right: 50px;
+        }
         margin-bottom: $huge-gap;
         height: 100%;
         .welcome {
@@ -173,8 +177,6 @@
         color: #000;
     }
 
-
-
     button {
         background-color: $primary;
         background: #E35383;
@@ -218,7 +220,7 @@
         letter-spacing: 1px;
         line-height: 26px;
         width: 75%;  
-        @media screen and (max-width: 1400px) {
+        @media screen and (max-width: 1500px) {
             width: 80%;
             font-size: 14px;
         }

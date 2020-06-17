@@ -1,3 +1,5 @@
+$mobile: 850px;
+
 .header {
     color: #767676;
     padding: 20px 10px;
@@ -26,7 +28,7 @@
         color: #767676;
         overflow: hidden;
         transition: color ease .2s, transform ease .2s;
-        @media screen and (min-width: 800px) {
+        @media screen and (min-width: $mobile) {
             margin-right: 50px;
             &::after {
                 content: "";
@@ -177,7 +179,7 @@
         }
     }
 
-    @media screen and (min-width: 800px) {
+    @media screen and (min-width: $mobile) {
         .desktop-menu {
             display: flex;
         }
@@ -187,7 +189,7 @@
         }
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: $mobile) {
         position: sticky;
         z-index: 9999;
         top: 0;
