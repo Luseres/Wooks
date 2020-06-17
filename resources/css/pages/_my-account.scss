@@ -103,9 +103,12 @@
     .woocommerce-MyAccount-content {
         box-sizing: border-box;
         box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.17);
-        padding: $huge-gap;
+        // padding: $huge-gap;
         margin-bottom: $huge-gap;
         height: 100%;
+        .welcome {
+            padding: $huge-gap;
+        }
 
         .welcome-msg {
             font-size: 30px;
@@ -135,6 +138,9 @@
         font-family: arial, sans-serif;
         border-collapse: collapse;
         width: 100%;
+        @media screen and (max-width: 900px) {
+            font-size: 11px;
+        }
     }
     
     .woocommerce-orders-table th {
@@ -208,7 +214,11 @@
         font-size: 16px;
         letter-spacing: 1px;
         line-height: 26px;
-        width: 75%;
+        width: 75%;  
+        @media screen and (max-width: 1400px) {
+            width: 80%;
+            font-size: 14px;
+        }
     }
     select {
         width: calc(75% + 25px);
@@ -228,9 +238,13 @@
         color: #9F9F9F;
     }
     .woocommerce-Address {
-        width: 25%;
-        display: inline-block;
-        margin-right: $huge-gap;
+        margin: 0 10px;
+        box-sizing: border-box;
+        @media screen and (min-width: 1400px) {
+            display: inline-block;
+            margin-right: $huge-gap;
+            width: 25%;
+        }
     }
     .woocommerce-Address-title {
         h3 {
@@ -257,6 +271,7 @@
     }
     section {
         padding: $small-gap 0;
+        
     }
     table {
         width: 100%;
@@ -272,4 +287,10 @@
     table {
         width: 69%;
     }
+}
+
+.woocommerce-EditAccountForm {
+    margin: 10px;
+    box-sizing: border-box;
+    padding: 10px;
 }

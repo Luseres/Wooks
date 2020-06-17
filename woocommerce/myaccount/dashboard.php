@@ -22,10 +22,11 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 ?>
-
-<p class="welcome-msg">Hello <?= esc_html($current_user->display_name); ?></p>
-<p class="login-verify">(not <?= esc_html($current_user->display_name); ?>? <a href="<?= esc_url(wc_logout_url()) ?>">Logout</a>)</p>
-<hr class="wooks__line">
+<div class="welcome">
+    <p class="welcome-msg">Hello <?= esc_html($current_user->display_name); ?></p>
+    <p class="login-verify">(not <?= esc_html($current_user->display_name); ?>? <a href="<?= esc_url(wc_logout_url()) ?>">Logout</a>)</p>
+    <hr class="wooks__line">
+</div>
 
 
 
