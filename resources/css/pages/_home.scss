@@ -52,50 +52,18 @@
             margin-top: 20px;
         }
     }
-    // .section__reasons {
-    //     background-color: $back-sec;
-    //     display: flex;
-    //     flex-direction: column;
-    //     align-items: center;
-    //     @media screen and (min-width: 1200px) {
-    //         flex-direction: row;
-    //         justify-content: space-between;
-    //     }
-    //     .reasons__reason {
-    //         max-width: 500px;
-    //         margin: 30px 0;
-    //         color: #000;
-    //         text-align: center;
-    //         @media screen and (min-width: 1200px) {
-    //             max-width: 300px;
-    //             margin: 0;
-    //         }
-    //         .reason__image {
-    //             width: 100%;
-    //             height: 200px;
-    //             object-fit: contain;
-    //             margin-bottom: 8px;
-    //         }
-    //         .reason__reason {
-    //             font-family: $font-title;
-    //             font-size: 25px;
-    //             margin-bottom: 8px;
-    //         }
-    //         .reason__explained {
-    //             font-size: 16px;
-    //         }
-    //     }
-    // }
-
-    // aaaaaaaaa
     .reasons {
         width: 100%;
         max-width: 100%;
-        padding: 50px 0 200px 0;
-        margin: 0;
+        // padding: 50px 0 200px 0;
+        margin: 100px 0;
         &__reason {
             position: relative;
             color: #fff;
+            @media screen and (max-width: 800px) {
+                text-align: center;
+                overflow: hidden;
+            }
             .img-box {
                 max-width: 400px;
                 background: #fff;
@@ -113,14 +81,23 @@
             .contents {
                 max-width: 1400px;
                 box-sizing: border-box;
-                @media screen and (max-width: 1500px) and (min-width: 1000px) {
-                    padding: 0 200px;
-                }
                 width: 100%;
                 margin: 0 auto;
+
                 display: flex;
                 align-items: center;
                 flex-wrap: wrap;
+
+                padding: 20px;
+
+                @media screen and (max-width: 800px) {
+                    justify-content: center;
+                    flex-direction: column;
+                }
+                
+                @media screen and (max-width: 1500px) and (min-width: 1200px) {
+                    padding: 0 200px;
+                }
                 .heading {
                     display: block;
                     max-width: 300px;
@@ -143,19 +120,32 @@
                     transform: rotate(-4deg) translate(-20%, -30%);
                 }
                 .img-box {
-                    margin-top: -100px;
+                    @media screen and (min-width: 800px) {
+                        margin-top: -100px;
+                    }
                 }
                 .heading {
-                    margin-right: auto;
                     margin-top: 50px;
+                    @media screen and (min-width: 800px) {
+                        margin-right: auto;
+                    }      
                 }
             }
 
             &:nth-child(2) {
-                margin: 100px 0;
                 color: #000;
+                @media screen and (min-width: 800px) {
+                    margin: 100px 0;
+                }
+
+                @media screen and (max-width: 800px) {
+                    padding-bottom: 100px;
+                }
+                
                 .heading {
-                    margin-left: auto;
+                    @media screen and (min-width: 800px) {
+                        margin-left: auto;
+                    }                    
                 }
             }
 
@@ -165,11 +155,15 @@
                     transform: rotate(-4deg) translate(-20%, -30%);
                 }
                 .img-box {
-                    margin-top: -100px;
+                    @media screen and (min-width: 800px) {
+                        margin-top: -100px;
+                    }
                 }
                 .heading {
-                    margin-right: auto;
                     margin-top: 50px;
+                    @media screen and (min-width: 800px) {
+                        margin-right: auto;
+                    }
                 }
             }
         }
