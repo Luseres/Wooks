@@ -5,7 +5,7 @@ do_action('woocommerce_before_main_content');
 <main class="subscriptions">
     <section>
         <p class="subscriptions__title">Our subscriptions</p>
-        <p class="subscriptions__subtitle">You can select your book type after selecting subscription.</p>
+        <p class="subscriptions__subtitle">Get a free trail subscription with the coupon: Free_Trail_Subscription.</p>
         <?php
         if (woocommerce_product_loop()) {
             do_action('woocommerce_before_shop_loop');
@@ -27,7 +27,7 @@ do_action('woocommerce_before_main_content');
                     do_action('woocommerce_no_products_found');
                 }
 
-                ?>
+                            ?>
     </section>
 </main>
 <?php
