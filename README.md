@@ -1,14 +1,13 @@
 # Wooks
 
-- [ ] Open - Je hebt onderzoeksvragen geformuleerd.
-- [ ] Open - Je hebt aantoonbaar onderzoek gedaan naar minstens 5 verschillende webshops. (maak screenshots en leg uit)
-- [ ] Open - Je hebt aantoonbaar onderzoek gedaan naar minstens 3 concurrenten die hetzelfde product verkopen. (maak screenshots)
-- [ ] Open - De conclusies die je hebt getrokken zijn een goede basis voor het project
+- [ ] Wiebe - Je hebt onderzoeksvragen geformuleerd.
+- [ ] Wiebe - Je hebt aantoonbaar onderzoek gedaan naar minstens 5 verschillende webshops. (maak screenshots en leg uit)
+- [ ] Joshua - Je hebt aantoonbaar onderzoek gedaan naar minstens 3 concurrenten die hetzelfde product verkopen. (maak screenshots)
+- [ ] Joshua - De conclusies die je hebt getrokken zijn een goede basis voor het project
 
-- [ ] Open - Je hebt (met behulp van jouw onderzoeksvragen) een interview met de doelgroep voorbereid.
-- [ ] Open - De conclusies die je hebt getrokken zijn een goede basis voor het project.
-- [ ] Open - Er is een interview gehouden met de doelgroep. (inzicht krijgen in jullie idee)
-- [ ] Open - Je kan via een video (link naar Youtube of Vimeo) het interview laten zien
+- [ ] Wiebe - Je hebt (met behulp van jouw onderzoeksvragen) een interview met de doelgroep voorbereid.
+- [ ] Wiebe - De conclusies die je hebt getrokken zijn een goede basis voor het project.
+- [ ] Wiebe - Er is een interview gehouden met de doelgroep. (inzicht krijgen in jullie idee)
 
 - [x] Joshua - In Trello staan alle taken in beeld
 - [x] Joshua - Taken zijn verdeeld tussen elkaar
@@ -19,8 +18,8 @@
 
 - [x] Wiebe - De wireframes zijn op ware grootte gemaakt voor 2 schermen; mobiel en desktop
 - [x] Wiebe - Er is een grid-systeem gebruikt met breekpunten om responsive te zijn
-- [x] Open - Alle elementen uit de Trello taken zijn terug te vinden.
-- [ ] Open - Je hebt een video gemaakt waar je zelf door je wireframes heen klikt en alle functionaliteiten laat zien.
+- [x] Joshua - Alle elementen uit de Trello taken zijn terug te vinden.
+- [ ] Wiebe - Je hebt een video gemaakt waar je zelf door je wireframes heen klikt en alle functionaliteiten laat zien.
 
 - [x] Wiebe - Alle pagina’s zijn uitgewerkt voor 2 schermen; mobiel en desktop.
 - [x] Wiebe - Het visueel ontwerp is gebaseerd op het functioneel ontwerp
