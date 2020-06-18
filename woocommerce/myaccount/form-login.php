@@ -1,5 +1,5 @@
 <main class="my-account fadein-slideup">
-    <section>
+    <section class="auth-page">
         <?php if (isset($_GET['signup'])) { ?>
             <div class="method--signup section__info">
                 <p class="info__subtitle">Sign up for a</p>
