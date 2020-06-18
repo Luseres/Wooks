@@ -28,8 +28,6 @@ if (!defined('ABSPATH')) {
     <hr class="wooks__line">
 </div>
 
-
-
 <p class="dashboard-info">
     <?php
     printf(
